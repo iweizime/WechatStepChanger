@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">WechatStepChanger</string>
+    <string name="load">LOAD</string>
+    <string name="store">STORE</string>
+    <string name="loaded">LOADED</string>
+    <string name="stored">STORED</string>
+    <string name="current_today_step_201">Current Today Step</string>
+    <string name="save_today_time_202">Save Today Time</string>
+    <string name="pre_sensor_step_203">Pre Sensor Step</string>
+    <string name="last_save_step_time_204">Last Save Step Time</string>
+    <string name="sensor_time_stamp_209">Sensor Time Stamp</string>
+    <string name="details">Details</string>
+    <string name="back">BACK</string>
+    <string name="decrease">decrease steps</string>
+    <string name="increase">increase steps</string>
+</resources>
