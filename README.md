@@ -5,7 +5,7 @@
 
 - 需要手机支持`Step Counter Sensor`
 
-- 需要`Root`获取`stepcounter.cfg`文件的读取权限，应用仅使用Root权限执行如下命令：
+- 需要`Root`获取`stepcounter.cfg`文件的读写权限，应用仅使用Root权限执行如下命令：
     - `chmod o+rw /data/data/com.tencent.mm/MicroMsg/stepcounter.cfg`
     - `chmod o+x /data/data/com.tencent.mm/MicroMsg/`
 
