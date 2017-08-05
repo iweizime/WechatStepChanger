@@ -43,7 +43,7 @@ class StepCounterCfg {
         return mHashMap;
     }
 
-    void loadCfg(Context context) {
+    boolean loadCfg(Context context) {
         File f;
         FileInputStream fis;
         ObjectInputStream ois;
@@ -59,18 +59,20 @@ class StepCounterCfg {
             mHashMap = (HashMap<Integer, Integer>) ois.readObject();
             ois.close();
             fis.close();
+            return true;
         } catch (Exception e) {
             Log.e(TAG, "Load Error: " + e.toString());
+            return false;
         }
     }
 
-    void storeCfg(Context context) {
+    boolean storeCfg(Context context) {
         File f;
         FileOutputStream fos;
         ObjectOutputStream oos;
 
         if (mHashMap == null) {
-            return;
+            return false;
         }
 
         try {
@@ -87,8 +89,10 @@ class StepCounterCfg {
             oos.writeObject(mHashMap);
             oos.close();
             fos.close();
+            return true;
         } catch (Exception e) {
             Log.e(TAG, "Store Error");
+            return false;
         }
     }
 

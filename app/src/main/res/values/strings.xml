@@ -3,7 +3,9 @@
     <string name="load">LOAD</string>
     <string name="store">STORE</string>
     <string name="loaded">LOADED</string>
+    <string name="load_failed">LOAD FAILED</string>
     <string name="stored">STORED</string>
+    <string name="store_failed">STORE FAILED</string>
     <string name="current_today_step_201">Current Today Step</string>
     <string name="save_today_time_202">Save Today Time</string>
     <string name="pre_sensor_step_203">Pre Sensor Step</string>
