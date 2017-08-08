@@ -30,7 +30,7 @@ class StepCounterCfg {
     private static final String STEP_COUNTER_CFG = "/data/data/com.tencent.mm/MicroMsg/stepcounter.cfg";
     private static final String WECHAT = "com.tencent.mm";
     private static final StepCounterCfg sStepCounterCfg = new StepCounterCfg();
-    private HashMap<Integer, Integer> mHashMap = null;
+    private HashMap<Integer, Long> mHashMap = null;
 
     private StepCounterCfg() {
     }
@@ -56,7 +56,7 @@ class StepCounterCfg {
             }
             fis = new FileInputStream(f);
             ois = new ObjectInputStream(fis);
-            mHashMap = (HashMap<Integer, Integer>) ois.readObject();
+            mHashMap = (HashMap<Integer, Long>) ois.readObject();
             ois.close();
             fis.close();
             return true;
@@ -96,21 +96,21 @@ class StepCounterCfg {
         }
     }
 
-    void changeStep(int diff) {
+    void changeStep(long diff) {
         if (mHashMap == null) {
             return;
         }
 
-        int newStep = (int) mHashMap.get(CURRENT_TODAY_STEP) + diff;
+        long newStep = mHashMap.get(CURRENT_TODAY_STEP) + diff;
         if (newStep >= 0) {
             mHashMap.put(CURRENT_TODAY_STEP, newStep);
         } else {
-            mHashMap.put(CURRENT_TODAY_STEP, 0);
+            mHashMap.put(CURRENT_TODAY_STEP, 0L);
         }
 
     }
 
-    void setStep(int step) {
+    void setStep(long step) {
         if (mHashMap == null) {
             return;
         }
