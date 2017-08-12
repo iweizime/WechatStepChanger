@@ -36,10 +36,11 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         mLoadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (StepCounterCfg.get().loadCfg(MainActivity.this)) {
+                int result = StepCounterCfg.get().loadCfg(MainActivity.this);
+                if (result == StepCounterCfg.SUCCESS) {
                     updateUI();
                     Toast.makeText(MainActivity.this, R.string.loaded, Toast.LENGTH_SHORT).show();
-                } else {
+                } else if (result == StepCounterCfg.FAIL){
                     Toast.makeText(MainActivity.this, R.string.load_failed, Toast.LENGTH_SHORT).show();
                 }
             }
@@ -49,9 +50,10 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         mStoreButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (StepCounterCfg.get().storeCfg(MainActivity.this)) {
+                int result = StepCounterCfg.get().storeCfg(MainActivity.this);
+                if (result == StepCounterCfg.SUCCESS) {
                     Toast.makeText(MainActivity.this, R.string.stored, Toast.LENGTH_SHORT).show();
-                } else {
+                } else if (result == StepCounterCfg.FAIL){
                     Toast.makeText(MainActivity.this, R.string.store_failed, Toast.LENGTH_SHORT).show();
                 }
 

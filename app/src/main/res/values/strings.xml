@@ -15,4 +15,9 @@
     <string name="back">BACK</string>
     <string name="decrease">decrease steps</string>
     <string name="increase">increase steps</string>
+    <string name="p_title">Getting Permissions</string>
+    <string name="p_message">Getting Read/Write Permissions ...</string>
+    <string name="a_title">Note:</string>
+    <string name="non_root">You don\'t have root access</string>
+    <string name="get_access_done">Done! Please Load Again!</string>
 </resources>

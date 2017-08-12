@@ -30,10 +30,11 @@ public class DetailsActivity extends AppCompatActivity {
         mLoadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (StepCounterCfg.get().loadCfg(DetailsActivity.this)) {
+                int result = StepCounterCfg.get().loadCfg(DetailsActivity.this);
+                if (result == StepCounterCfg.SUCCESS) {
                     updateUI();
                     Toast.makeText(DetailsActivity.this, R.string.loaded, Toast.LENGTH_SHORT).show();
-                } else {
+                } else if (result == StepCounterCfg.FAIL) {
                     Toast.makeText(DetailsActivity.this, R.string.load_failed, Toast.LENGTH_SHORT).show();
                 }
             }
@@ -51,9 +52,10 @@ public class DetailsActivity extends AppCompatActivity {
         mStoreButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (StepCounterCfg.get().storeCfg(DetailsActivity.this)) {
+                int result = StepCounterCfg.get().storeCfg(DetailsActivity.this);
+                if (result == StepCounterCfg.SUCCESS) {
                     Toast.makeText(DetailsActivity.this, R.string.stored, Toast.LENGTH_SHORT).show();
-                } else {
+                } else if (result == StepCounterCfg.FAIL){
                     Toast.makeText(DetailsActivity.this, R.string.store_failed, Toast.LENGTH_SHORT).show();
                 }
             }
