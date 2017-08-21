@@ -9,6 +9,8 @@
     - `chmod o+rw /data/data/com.tencent.mm/MicroMsg/stepcounter.cfg`
     - `chmod o+x /data/data/com.tencent.mm/MicroMsg/`
 
+- 不要一次改的太多，会被检测为异常。从3k改到5w是不行的，其他的没测试过
+
     如果不想授予应用Root权限，或者应用没有成功执行命令，也可以手动执行上面两条命令。
 
 支持Android 5.1以上系统，仅在Android 7.x系统上测试过
