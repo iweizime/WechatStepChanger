@@ -1,6 +1,8 @@
 # 微信运动步数修改器
 
 
+<h1><font color="red">本项目已废弃，移步<a href="https://github.com/iweizime/StepChanger" >步数修改器</a></font></h1>
+
 ## 注意
 
 - 需要手机支持`Step Counter Sensor`
